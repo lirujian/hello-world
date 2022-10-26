@@ -18,9 +18,16 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
 
+  runner-test:
+    machine: true
+    resource_class: lirujian/localrun
+    steps:
+      - run: echo "Hi I'm on Runners!"
+
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+      - runner-test
