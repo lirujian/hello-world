@@ -23,6 +23,7 @@ jobs:
     resource_class: lirujian/localrun
     steps:
       - run: echo "Hi I'm on Runners!"
+      - run: mkdir /tmp/tmp
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
